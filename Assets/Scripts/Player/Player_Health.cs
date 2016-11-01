@@ -27,15 +27,7 @@ public class Player_Health : MonoBehaviour {
         }
     }
 
-    void OnTriggerEnter2D(Collider2D other)
-    {
-        if(other.gameObject.tag.Contains("Enemy_") || other.gameObject.tag == "Death_Trigger")
-        {
-            SetPlayerDamage(other.gameObject.tag);
-        }
-    }
-
-    void SetPlayerDamage(string TypeOfEnemy)
+    public void SetPlayerDamage(string TypeOfEnemy)
     {
         switch(TypeOfEnemy)
         {

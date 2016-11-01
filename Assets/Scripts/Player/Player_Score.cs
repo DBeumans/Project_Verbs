@@ -14,27 +14,21 @@ public class Player_Score : MonoBehaviour {
         }
     }
 
-    void OnTriggerEnter2D (Collider2D other)
-    {
-        
-        if(other.gameObject.tag.Contains("Object_")) // checks if the other.gameobject.tag have Object_ .
-        {
-            SetPlayerScore(other.gameObject.tag);
-        }
-    }
-
-    void SetPlayerScore(string ObjectTag)
+    public void SetPlayerScore(string ObjectTag)
     {
         switch(ObjectTag)
         {
             case "Object_Yellow": // needs to change to Object_<what the object is> example: Object_Wallet.
                 _player_score += 1;
+                Debug.Log(_player_score);
                 break;
             case "Object_Red": // needs to change to Object_<what the object is> example: Object_Wallet.
                 _player_score += 2;
+                Debug.Log(_player_score);
                 break;
             case "Object_Blue": // needs to change to Object_<what the object is> example: Object_Wallet.
                 _player_score += 3;
+                Debug.Log(_player_score);
                 break;
         }
     }
