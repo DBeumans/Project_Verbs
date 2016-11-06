@@ -20,15 +20,15 @@ public class Player_Score : MonoBehaviour {
         {
             case "Object_Yellow": // needs to change to Object_<what the object is> example: Object_Wallet.
                 _player_score += 1;
-                Debug.Log(_player_score);
+                
                 break;
             case "Object_Red": // needs to change to Object_<what the object is> example: Object_Wallet.
                 _player_score += 2;
-                Debug.Log(_player_score);
+                
                 break;
             case "Object_Blue": // needs to change to Object_<what the object is> example: Object_Wallet.
                 _player_score += 3;
-                Debug.Log(_player_score);
+                
                 break;
         }
     }
