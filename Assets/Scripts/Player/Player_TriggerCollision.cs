@@ -20,6 +20,7 @@ public class Player_TriggerCollision : MonoBehaviour {
         if (other.gameObject.tag.Contains("Enemy_") || other.gameObject.tag == "Death_Trigger")
         {
             _player_health.SetPlayerDamage(other.gameObject.tag);
+            Destroy(other.gameObject);
         }
 
         // Player Score Check
@@ -27,6 +28,7 @@ public class Player_TriggerCollision : MonoBehaviour {
         if (other.gameObject.tag.Contains("Object_")) // checks if the other.gameobject.tag have Object_ .
         {
             _player_score.SetPlayerScore(other.gameObject.tag);
+            Destroy(other.gameObject);
         }
     }
 }
