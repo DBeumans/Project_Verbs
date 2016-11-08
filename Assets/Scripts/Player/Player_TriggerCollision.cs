@@ -5,12 +5,12 @@ public class Player_TriggerCollision : MonoBehaviour {
 
 
     Player_Score _player_score;
-    Player_Health _player_health;
+    Player_Damage _player_damage;
 
     void Start()
     {
         _player_score = GameObject.FindObjectOfType<Player_Score>();
-        _player_health = GameObject.FindObjectOfType<Player_Health>();
+        _player_damage = GameObject.FindObjectOfType<Player_Damage>();
     }
 
     void OnTriggerEnter2D(Collider2D other)
@@ -19,7 +19,7 @@ public class Player_TriggerCollision : MonoBehaviour {
 
         if (other.gameObject.tag.Contains("Enemy_") || other.gameObject.tag == "Death_Trigger")
         {
-            _player_health.SetPlayerDamage(other.gameObject.tag);
+            _player_damage.SetPlayerDamage(other.gameObject.tag);
             Destroy(other.gameObject);
         }
 

@@ -13,12 +13,12 @@ public class While_Playing_UI : MonoBehaviour {
     int _playerHealth;
 
     Player_Score _Player_Score;
-    Player_Health _Player_Health;
+    Player_HealthData _Player_Health;
 
     void Start()
     {
         _Player_Score = GameObject.FindObjectOfType<Player_Score>();
-        _Player_Health = GameObject.FindObjectOfType<Player_Health>();
+        _Player_Health = GameObject.FindObjectOfType<Player_HealthData>();
     }
 
     void Update()
