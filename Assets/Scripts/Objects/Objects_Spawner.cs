@@ -31,7 +31,6 @@ public class Objects_Spawner : SpawningBehaviour {
     void Spawn()
     {
         _spawnable = false;
-        Debug.Log("Spawned a object");
         ObjectSpawner(Objects, spawnPoints);
     }
 }
