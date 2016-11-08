@@ -30,3 +30,4 @@ sysinfo.txt
 *.unitypackage
 ProjectSettings/ProjectSettings.asset
 ProjectSettings/ProjectSettings.asset
+Assets/Scripts/Player/Player_Score.cs
