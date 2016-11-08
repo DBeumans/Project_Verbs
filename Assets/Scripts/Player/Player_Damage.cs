@@ -22,7 +22,7 @@ public class Player_Damage : MonoBehaviour {
                 _PlayerHealth.PlayerHealth -= 15;
                 break;
             case "Enemy_Wallet":
-                _PlayerHealth.PlayerHealth -= 100;
+                _PlayerHealth.PlayerHealth -= 10;
                 break;
 
             case "Enemy_Rocket": // needs to change to Enemy_<what the object is> example: Enemy_Spikes.
