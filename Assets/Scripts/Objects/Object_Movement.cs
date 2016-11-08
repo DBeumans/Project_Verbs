@@ -5,16 +5,16 @@ public class Object_Movement : MonoBehaviour {
 
     [SerializeField]
     int _object_speed;
-
-    Rigidbody2D _rigidbody2d;
+    Vector3 Movement;
+    
 
     void Start()
     {
-        _rigidbody2d = gameObject.GetComponent<Rigidbody2D>();
+        Movement = new Vector3(Time.deltaTime * _object_speed * -1, 0, 0);
     }
 
     void Update()
     {
-        _rigidbody2d.AddForce(Vector2.left * _object_speed);
+        this.transform.position += Movement;
     }
 }
