@@ -1,11 +1,11 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Objects_Spawner : SpawningBehaviour {
+public class Enemy_Spawner : SpawningBehaviour {
 
     //Object to spawn , its a array so you can spawn different objects of the same type.
     [SerializeField]
-    GameObject[] Objects;
+    GameObject[] Enemies;
     //Spawnpoints, where the objects needs to spawn.
     [SerializeField]
     Transform spawnPoints;
@@ -18,6 +18,6 @@ public class Objects_Spawner : SpawningBehaviour {
 
     void Spawn()
     {
-        ObjectSpawner(Objects, spawnPoints);
+        ObjectSpawner(Enemies, spawnPoints);
     }
 }
