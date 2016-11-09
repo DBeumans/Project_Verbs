@@ -11,21 +11,36 @@ public class Enemy_Data : MonoBehaviour {
 
     [SerializeField]
     string _enemy_name;
-    string _enemy_damage;
+    int _enemy_damage;
+
+    public string EnemyName { get { return _enemy_name; } }
+    public int EnemyDamage { get { return _enemy_damage; } }
 
     void Start()
     {
+        GetComponents();
+        SetEnemyValues();
+    }
 
+    void GetComponents()
+    {
         _enemy_damageType = GetComponent<Enemy_DamageType>();
         _enemy_nameData = GetComponent<Enemy_NamesData>();
 
-        if(_enemy_nameData.EnemyName != "")
+    }
+
+    void SetEnemyValues()
+    {
+        if (_enemy_nameData.EnemyName != null)
         {
             _enemy_name = _enemy_nameData.EnemyName;
         }
-        
 
-        Debug.Log("Enemy Name: " +_enemy_name);
+        if(_enemy_damageType.EnemyDamage != 0)
+        {
+            _enemy_damage = _enemy_damageType.EnemyDamage;
+            Debug.Log("Enemy Damage: " + _enemy_damage);
+        }
     }
-    
+
 }

@@ -19,6 +19,7 @@ public class Player_TriggerCollision : MonoBehaviour {
 
         if (other.gameObject.tag.Contains("Enemy_") || other.gameObject.tag == "Death_Trigger")
         {
+            //get other game object, enemy data component
             _player_damage.SetPlayerDamage(other.gameObject.tag);
             Destroy(other.gameObject);
         }

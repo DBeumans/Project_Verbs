@@ -13,9 +13,13 @@ public enum EnemyDamageType
 
 public class Enemy_DamageType : MonoBehaviour {
 
+    /*
+        Use Enemy_Data Class to get the enemy damage.
+    */
+
     int _damage;
 
-    public int Damage { get { return _damage; } }
+    public int EnemyDamage { get { return _damage; } }
 
     void Start()
     {

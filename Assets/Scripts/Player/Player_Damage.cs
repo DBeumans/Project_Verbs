@@ -4,6 +4,7 @@ using System.Collections;
 public class Player_Damage : MonoBehaviour {
 
     Player_HealthData _PlayerHealth;
+    Enemy_Data _enemyData;
 
     void Start()
     {
@@ -14,6 +15,13 @@ public class Player_Damage : MonoBehaviour {
     {
         switch (TypeOfEnemy)
         {
+
+            case "Enemy_Wallet":
+                _enemyData = GameObject.FindObjectOfType<Enemy_Data>();
+                _PlayerHealth.PlayerHealth -= _enemyData.EnemyDamage;
+                break;
+
+            /*
             case "Enemy_Spikes": // needs to change to Enemy_<what the object is> example: Enemy_Spikes.
                 _PlayerHealth.PlayerHealth -= 10;
                 break;
@@ -32,6 +40,7 @@ public class Player_Damage : MonoBehaviour {
             case "Death_Trigger": // when it touches the death trigger.
                 _PlayerHealth.PlayerHealth -= 100;
                 break;
+            */
         }
     }
 
