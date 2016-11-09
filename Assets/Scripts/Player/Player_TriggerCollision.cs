@@ -6,11 +6,13 @@ public class Player_TriggerCollision : MonoBehaviour {
 
     Player_Score _player_score;
     Player_Damage _player_damage;
+    Player_Movement _player_movement;
 
     void Start()
     {
         _player_score = GameObject.FindObjectOfType<Player_Score>();
         _player_damage = GameObject.FindObjectOfType<Player_Damage>();
+        _player_movement = GameObject.FindObjectOfType<Player_Movement>();
     }
 
     void OnTriggerEnter2D(Collider2D other)
@@ -30,6 +32,11 @@ public class Player_TriggerCollision : MonoBehaviour {
         {
             _player_score.SetPlayerScore(other.gameObject.tag);
             Destroy(other.gameObject);
+        }
+
+        if(other.gameObject.tag == "Ground")
+        {
+            _player_movement.PlayerGrounded = true;
         }
     }
 }

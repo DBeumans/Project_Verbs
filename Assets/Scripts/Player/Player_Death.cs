@@ -16,10 +16,6 @@ public class Player_Death : MonoBehaviour {
 
     public void PlayerDeath()
     {
-        // time freeze.
-        // save the game
-        // load game over screen.
-        //Time.timeScale = 0;
         _setHighscore.SetScore();
         _saveBehaviour.SaveHighscore();
         _switch_scene.LoadScene(2);
