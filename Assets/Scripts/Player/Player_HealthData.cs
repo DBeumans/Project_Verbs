@@ -31,8 +31,12 @@ public class Player_HealthData : MonoBehaviour {
 
     IEnumerator HealthCheck()
     {
-        while(_player_currentHealth > 0 && _player_currentHealth < 101)
+        while(_player_currentHealth > 0 )
         {
+            if(PlayerHealth > 100)
+            {
+                PlayerHealth = 100;
+            }
             if (PlayerHealth != 100 && !_PlayerHealthGeneration.IsGeneratingHealth)
             {
                 _PlayerHealthGeneration.StartHealthGeneration();

@@ -3,7 +3,7 @@ using System.Collections;
 
 public class Player_HealthRegeneration : Player_HealthData {
 
-    int _regenerationPoints = 5;
+    int _regenerationPoints = 2;
     bool _isGeneratingHealth = false;
 
     public bool IsGeneratingHealth { get { return _isGeneratingHealth; } }
@@ -28,7 +28,7 @@ public class Player_HealthRegeneration : Player_HealthData {
         {
             // add health over time
             PlayerHealth += _regenerationPoints;
-            yield return new WaitForSeconds(1f);
+            yield return new WaitForSeconds(2f);
         }
         // is at max health.
         _isGeneratingHealth = false;

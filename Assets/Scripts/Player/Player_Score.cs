@@ -16,13 +16,13 @@ public class Player_Score : MonoBehaviour {
     {
         switch(ObjectTag)
         {
-		case "Object_Yellow": // needs to change to Object_<what the object is> example: Object_Wallet.
+		case "Object_small": 
 				_player_score += 1;
                 break;
-            case "Object_Red": // needs to change to Object_<what the object is> example: Object_Wallet.
+            case "Object_medium": 
                 _player_score += 2;
                 break;
-            case "Object_Blue": // needs to change to Object_<what the object is> example: Object_Wallet.
+            case "Object_high": 
                 _player_score += 3;
                 break;
         }

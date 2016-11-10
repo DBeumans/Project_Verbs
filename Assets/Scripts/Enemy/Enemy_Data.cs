@@ -39,7 +39,7 @@ public class Enemy_Data : MonoBehaviour {
         if(_enemy_damageType.EnemyDamage != 0)
         {
             _enemy_damage = _enemy_damageType.EnemyDamage;
-            Debug.Log("Enemy Damage: " + _enemy_damage);
+           // Debug.Log("Enemy Damage: " + _enemy_damage);
         }
     }
 
