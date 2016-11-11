@@ -3,7 +3,7 @@ using System.Collections;
 
 public class Player_Movement : InputBehaviour  {
 
-    float _jumpPower = 300;
+    float _jumpPower = 400;
     [SerializeField]
     bool _grounded;
 
@@ -27,6 +27,10 @@ public class Player_Movement : InputBehaviour  {
                 _grounded = false;
             }
 
+        }
+        if(DownKey)
+        {
+            _rigidbody2D.AddForce(Vector2.down * _jumpPower/2);
         }
     }
 }

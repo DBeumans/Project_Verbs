@@ -14,7 +14,7 @@ public class Death_Trigger : MonoBehaviour {
     {
         if(ThisObjectName != other.gameObject.name)
         {
-            Destroy(other.gameObject); // Destroys the whole object.
+            Destroy(other.gameObject);
             
         }
     }

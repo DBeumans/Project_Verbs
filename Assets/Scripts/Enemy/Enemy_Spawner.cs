@@ -9,7 +9,9 @@ public class Enemy_Spawner : SpawningBehaviour {
     //Spawnpoints, where the objects needs to spawn.
     [SerializeField]
     Transform spawnPoints;
+
     float spawnTime = 2f;
+    public float SpawnTime { get { return spawnTime; } set { spawnTime = value; } }
 
     void Start()
     {

@@ -6,12 +6,14 @@ public class PauzeBehaviour : InputBehaviour {
     [SerializeField]
     GameObject PauzePanel; // pauze ui.
 
-    public bool _isPauzed;
+    bool _isPauzed;
+    public bool IsPauzed { get { return _isPauzed; } set { _isPauzed = value; } }
 
     void Start()
     {
         PauzePanel.SetActive(false); // hide the pauze panel.
         _isPauzed = false;
+        Time.timeScale = 1;
     }
 
     void Update() { CheckKeys(); KeyCheck(); }
@@ -31,7 +33,7 @@ public class PauzeBehaviour : InputBehaviour {
         }
     }
 
-    void PauzeGame(bool value)
+    public void PauzeGame(bool value)
     {
         if (value) // game pauzed.
         {

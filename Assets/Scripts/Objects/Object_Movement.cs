@@ -3,18 +3,11 @@ using System.Collections;
 
 public class Object_Movement : MonoBehaviour {
 
-    [SerializeField]
-    int _object_speed;
-    Vector3 Movement;
-    
+    float MovementSpeed = 5f;
 
-    void Start()
-    {
-        Movement = new Vector3(Time.deltaTime * _object_speed * -1, 0, 0);
-    }
-
+    // Update is called once per frame
     void Update()
     {
-        this.transform.position += Movement;
+        transform.Translate(Vector2.left * MovementSpeed * Time.deltaTime);
     }
 }

@@ -17,7 +17,7 @@ public class Player_Death : MonoBehaviour {
     public void PlayerDeath()
     {
         _setHighscore.SetScore();
-        _saveBehaviour.SaveHighscore();
+        _saveBehaviour.SaveScore();
         _switch_scene.LoadScene(2);
     }
 }

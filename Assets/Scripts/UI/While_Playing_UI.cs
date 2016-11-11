@@ -30,7 +30,7 @@ public class While_Playing_UI : MonoBehaviour {
 
     void ShowText()
     {
-        _player_scoreText.text = "Player Score: " + _playerScore;
-        _player_healthText.text = "Player Health: " + _playerHealth + " %";
+        _player_scoreText.text = "Score: " + "$" + _playerScore;
+        _player_healthText.text = "Health: " + _playerHealth + " %";
     }
 }
