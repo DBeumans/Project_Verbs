@@ -7,12 +7,14 @@ public class Player_TriggerCollision : MonoBehaviour {
     Player_Score _player_score;
     Player_Damage _player_damage;
     Player_Movement _player_movement;
+    PlaySoundBehaviour _playSoundBehaviour;
 
     void Start()
     {
         _player_score = GameObject.FindObjectOfType<Player_Score>();
         _player_damage = GameObject.FindObjectOfType<Player_Damage>();
         _player_movement = GameObject.FindObjectOfType<Player_Movement>();
+        _playSoundBehaviour = GameObject.FindObjectOfType<PlaySoundBehaviour>();
     }
 
     void OnTriggerEnter2D(Collider2D other)
@@ -22,8 +24,9 @@ public class Player_TriggerCollision : MonoBehaviour {
         if (other.gameObject.tag.Contains("Enemy_") || other.gameObject.tag == "Death_Trigger")
         {
             //get other game object, enemy data component
+            _playSoundBehaviour.PlaySound("Player_Hit");
             _player_damage.SetPlayerDamage(other.gameObject.tag);
-            Destroy(other.gameObject);
+            Destroy(other.gameObject);     
         }
 
         // Player Score Check

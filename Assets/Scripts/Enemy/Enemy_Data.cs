@@ -12,9 +12,12 @@ public class Enemy_Data : MonoBehaviour {
     [SerializeField]
     string _enemy_name;
     int _enemy_damage;
+    int _enemy_Health;
+
 
     public string EnemyName { get { return _enemy_name; } }
     public int EnemyDamage { get { return _enemy_damage; } }
+    public int EnemyHealth { get { return _enemy_Health; } set { _enemy_Health = value; } }
 
     void Start()
     {
@@ -24,6 +27,7 @@ public class Enemy_Data : MonoBehaviour {
 
     void GetComponents()
     {
+        _enemy_Health = 3;
         _enemy_damageType = GetComponent<Enemy_DamageType>();
         _enemy_nameData = GetComponent<Enemy_NamesData>();
 
